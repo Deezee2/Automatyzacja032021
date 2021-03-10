@@ -94,9 +94,10 @@ public class ContactPagePO extends HomepagePO {
         messageBox.sendKeys(messageTest);
 
         logger.debug("Trying to sent test message");
+        logger.trace("Waiting for send button available");
         wait.until(ExpectedConditions.elementToBeClickable(sendMessageButton));
+        logger.trace("Clicking send button");
         sendMessageButton.click();
-
     }
 
     public boolean messageSendingStatus (){

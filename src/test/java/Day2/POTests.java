@@ -17,6 +17,19 @@ public class POTests extends BaseTest {
         Assert.assertTrue(homepagePO.isDisplayed());
     }
 
+    @Test
+    public void firstPOTestZPomiaremCzasu() {
+        //given
+        HomepagePO homepagePO = new HomepagePO(driver);
+        //when
+        long czas = System.currentTimeMillis();
+        homepagePO.openMe();
+        long ladowanie = System.currentTimeMillis() - czas;
+        logger.fatal("Czas ładowania = " + ladowanie);
+        //then
+        Assert.assertTrue(homepagePO.isDisplayed());
+    }
+
     //Zadanie:
     //Najechać na Woman
     //Sprawdzić, że wyświetla się podmenu
