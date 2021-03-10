@@ -58,9 +58,9 @@ public class HomepagePO extends BasePO {
     }
 
     public HomepagePO openWomenTopMenu() {
-        logger.debug("Will try to move to" + womenTopMenu.getText());
+        logger.debug("Will try to move to " + womenTopMenu.getText());
         actions.moveToElement(womenTopMenu).build().perform();
-        logger.debug("Moved to element" + womenTopMenu.getText());
+        logger.debug("Moved to element " + womenTopMenu.getText());
         logger.debug("Will wait for visibility of " + menuWomanDisplayed.getText());
         wait.until(ExpectedConditions.visibilityOf(menuWomanDisplayed));
         logger.debug("Opened top menu " + menuWomanDisplayed.getText());
